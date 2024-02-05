@@ -8,6 +8,10 @@
         body{
             background-color: aquamarine;
         }
+
+        .special h3{
+
+        }
     </style>
     <!-- <script src="hello.js"></script> -->
 
@@ -51,6 +55,70 @@
 
         </section>
 
+        <section>
+            <article class="special">
+                <h3>article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa a, dolores pariatur obcaecati consectetur accusamus magni quo quae, hic saepe dicta ducimus commodi necessitatibus sed sit soluta deleniti at facere.</p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Deserunt veritatis accusantium labore quis quia voluptas deleniti dignissimos, eligendi similique itaque corporis atque alias culpa iste iusto hic eum. Repudiandae doloremque ullam excepturi aperiam sapiente dolores repellat eius eum!</p>
+            </article>
+            <article id="third">
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Nemo aliquam quam aliquid molestias ipsum velit tenetur doloribus dolore recusandae totam praesentium, doloremque necessitatibus quaerat sequi pariatur provident? Nostrum, voluptates quasi! Magni quae et debitis, fugit nam qui rem?</p>
+            </article>
+            <article>
+                <h3>sports list</h3>
+                <ul id="si">
+                    <li>sports item-1</li>
+                    <li>sports item-2</li>
+                    <li>sports item-3</li>
+                    <li>sports item-4</li>
+                    <li>sports item-5</li>
+                </ul>
+            </article>
+        </section>
+
+        <script>
+            var authors= document.getElementsByClassName('author');
+            for(var i=0;i<authors.length;i++){
+                var element= authors[i];
+                element.style.backgroundColor='red';
+                element.innerHTML='Lekhok-'+i;
+            }
+            
+        </script>
+
+        <script>
+            const article= document.getElementById('third');
+            const newParagraph=document.createElement('p');
+            newParagraph.innerHTML='This is added by js';
+            article.appendChild(newParagraph);
+
+        </script>
+
+        <script>
+            const item=document.getElementById('si');
+            const newList=document.createElement('li');
+            newList.innerHTML='sports item-6';
+            item.appendChild(newList);
+        </script>
+
+        <button id="MyButton">Click ME</button>
+
+        <script>
+            const btn = document.querySelector("#MyButton");
+
+            function greet(event) {
+            console.log("greet:", event);
+            }
+
+            btn.addEventListener("click", greet);
+        </script>
 
 </body>
 </html>
